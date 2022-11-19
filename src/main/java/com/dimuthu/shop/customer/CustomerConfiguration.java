@@ -12,17 +12,15 @@ public class CustomerConfiguration {
     private Boolean useFakeCustomerRepo;
 
     @Bean
-    CommandLineRunner commandLineRunner(){
+    CommandLineRunner commandLineRunner() {
         return args -> {
             System.out.println("Command line runner");
         };
     }
 
     @Bean
-    CustomerRepo customerRepo(){
+    CustomerRepo customerRepo() {
         System.out.println("useFakeCustomerRepo = " + useFakeCustomerRepo);
-        return useFakeCustomerRepo ?
-                new CustomerFakeRepository() :
-                new CustomerRepository();
+        return new CustomerFakeRepository();
     }
 }
