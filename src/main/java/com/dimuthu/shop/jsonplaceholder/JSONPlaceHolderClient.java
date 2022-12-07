@@ -12,6 +12,6 @@ public interface JSONPlaceHolderClient {
     @GetMapping("posts")
     List<Post> getPosts();
 
-    @GetMapping("post/{postId}")
+    @GetMapping("posts/{postId}")
     Post getPost(@PathVariable("postId") Integer postId);
 }
