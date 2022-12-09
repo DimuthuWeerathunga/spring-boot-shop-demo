@@ -13,7 +13,7 @@ public class CustomerControllerV2 {
 
     private final CustomerService customerService;
 
-    @Autowired
+    @Autowired // autowired annotation for the constructor is optional
     public CustomerControllerV2(CustomerService customerService) {
         this.customerService = customerService;
     }
